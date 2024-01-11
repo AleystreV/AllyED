@@ -142,10 +142,10 @@ def fix_data(input_data):
     print(processed_input_data)
     return processed_input_data
 
-ebullying_model = joblib.load("ebullying_model_84.sav")
-mental_health_model = joblib.load("depression_model_71.sav")
-pbullying_model = joblib.load("pbullying_model_82.sav")
-suicide_model = joblib.load("suicide_model_82.sav")
+ebullying_model = joblib.load("NewNewModels/ebullying_model_84.sav")
+mental_health_model = joblib.load("NewNewModels/depression_model_71.sav")
+pbullying_model = joblib.load("NewNewModels/pbullying_model_82.sav")
+suicide_model = joblib.load("NewNewModels/suicide_model_82.sav")
 
 def make_predictions(processed_data):
     scaler = StandardScaler()
