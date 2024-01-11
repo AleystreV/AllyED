@@ -1,23 +1,0 @@
-€•ø      Œsklearn.linear_model._logistic”ŒLogisticRegression”“”)”}”(Œ penalty”Œl2”Œdual”‰Œtol”G?6âëC-ŒC”G?ð      Œ
-fit_intercept”ˆŒintercept_scaling”KŒclass_weight”NŒrandom_state”NŒsolver”Œlbfgs”Œmax_iter”KdŒmulti_class”Œauto”Œ verbose”K Œ
-warm_start”‰Œn_jobs”NŒl1_ratio”NŒfeature_names_in_”Œjoblib.numpy_pickle”ŒNumpyArrayWrapper”“”)”}”(Œsubclass”Œnumpy”Œ ndarray”“”Œshape”K)…”Œorder”h	Œdtype”hh$“”ŒO8”‰ˆ‡”R”(KŒ|”NNNJÿÿÿÿJÿÿÿÿK?t”bŒ
-allow_mmap”‰Œnumpy_array_alignment_bytes”Kub€cnumpy.core.multiarray
-_reconstruct
-q cnumpy
-ndarray
-qK …qc_codecs
-encode
-qX   bqX   latin1q†qRq ‡qRq	(KK)…q
-cnumpy
-dtype
-qX   O8q‰ˆ‡q
-Rq(KX   |qNNNJÿÿÿÿJÿÿÿÿK?tqb‰]q(X   ageqX   genderqX   gradeqX   hispanicqX   whiteqX   pacificIslanderqX   blackqX   asianqX   americanIndianqX   heightqX   weightNumberqX   seatbeltRidingqX   doesNotUnderstandqX   questioningqX   otherq X   bisexualq!X   gayq"X   straightq#X   weightDescriptionq$X
-   weightPlanq%X   juiceq&X   fruitq'X   saladq(X   potatoq)X   carrotq*X   otherVegq+X   sodaq,X   milkq-X   breakfastCountq.X
-   physicalCountq/X
-   screenTimeq0X   peClassCountq1X   sportsTeamsq2X
-   sleepHoursq3X   drankSportsDrinkq4X
-   drankWaterq5X   muscleExerciseq6X   schoolmateClosenessq7X   familyAwarenessq8X   concentratingIssuesq9X   englishSpeakingq:etq;b.•e       Œn_features_in_”K)Œclasses_”h)”}”(hh h!K…”h#h	h$h%Œf8”‰ˆ‡”R”(KŒ<”NNNJÿÿÿÿJÿÿÿÿK t”bh+ˆh,Kubÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ      ð?       @•O       Œ n_iter_”h)”}”(hh h!K…”h#h	h$h%Œi4”‰ˆ‡”R”(Kh5NNNJÿÿÿÿJÿÿÿÿK t”bh+ˆh,Kub ÿÿÿÿÿÿÿd   •-       Œcoef_”h)”}”(hh h!KK)†”h#h	h$h4h+ˆh,Kubÿÿÿÿÿ«ô†ÕKÈ£¿[wÛçã?ƒðÁÏÌÇ•?ôQ—V»\Á?â1 þTl ?ÿÅ V{?Æ¿“ŸpñÞÆÐ¿é"5&™µ¿Švm9Ï´?‰žz·½¿äU°– ??‡´¹XtN¾?MÿU³xYà¿—ÙhhéÈ¿
-È	]ÉÁ¿ÑK»L‹ZÓ?;Äû@½¨¿sÂ9½¯$ì¿v`Ãs\d¿±§ò s»?#{T¨¿‘`l)¿ ?
-‡Û¶e2Œ¿¸æÄwÍp‚¿À“ÿct?”ð×Q€á¬¿ùgÃ€W-¬¿òÞ§l®g?ºiœÕm²?FSÉ¦™ ?O>Cl¤Ú³¿ÑÌãçå^?iëæ¨Ì»}?ãïÆ…ƒ;Ì?Â¬j,$½ƒ¿Èš
-›)D¿èþ)£ûqž¿Öÿ¼ws”Æ¿Í(½ŽTû¿?úŠ1[$ï?ŒÊi¨±?•0       Œ
-intercept_”h)”}”(hh h!K…”h#h	h$h4h+ˆh,KubÿÿÿÿÿÿÿÿÿÿÿÿÿÿØüÄ¦(Á¿•       Œ_sklearn_version”Œ1.2.2”ub.
