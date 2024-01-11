@@ -1,5 +1,5 @@
-import joblib
 import streamlit as st
+import joblib
 
 st.title("Project AllyED")
 st.caption("Welcome to Project AllyED! We're here to help you foster an environment where your students can feel safe. Trained on the Youth Risk Behavior Survey (YRBS), our model uses the information you enter in the sidebar to predict whether a student might be at a higher risk for depression, suicidal thoughts, physical bullying, and cyberbullying. You can also generally toggle the options to see how different factors affect the probability of various student risks.")
