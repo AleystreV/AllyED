@@ -1,7 +1,6 @@
-import streamlit as st
 import joblib
-import pandas as pd
-from sklearn.preprocessing import StandardScaler
+import streamlit as st
+import matplotlib.pyplot as plt
 
 st.title("Project AllyED")
 st.caption("Welcome to Project AllyED! We're here to help you foster an environment where your students can feel safe. Trained on the Youth Risk Behavior Survey (YRBS), our model uses the information you enter in the sidebar to predict whether a student might be at a higher risk for depression, suicidal thoughts, physical bullying, and cyberbullying. You can also generally toggle the options to see how different factors affect the probability of various student risks.")
@@ -35,7 +34,7 @@ with st.sidebar:
     drankSportsDrink = st.selectbox("How many times did you drink a sport drink during the past 7 days?", ["None", "1-3", "4-6", "1/day", "2/day", "3/day", "4/day"], index=0)
     drankWater = st.selectbox("How many times did you drink a glass of water during the past 7 days?", ["None", "1-3", "4-6", "1/day", "2/day", "3/day", "4+/day"], index=6)
     muscleExercise = st.selectbox("How many days did you train your muscles during the past 7 days", ["None", "1 day", "2 days", "3 days", "4 days", "5 days", "6 days", "7 days"], index=0)
-    schoolmateCloseness = st.selectbox("Do you disagree that you feel close to people at your school?", ["Strongly agree", "Agree", "Not sure", "Disagree", "Strongly disagree"], index=1)
+    schoolmateCloseness = st.selectbox("Do you agree that you feel close to people at your school?", ["Strongly agree", "Agree", "Not sure", "Disagree", "Strongly disagree"], index=1)
     familyAwareness = st.selectbox("How often do your parents or other adults in your family know where you are going or with whom you will be?", ["Never", "Rarely", "Sometimes", "Most of the time", "Always"], index=4)
     concentratingIssues = st.selectbox("Because of a physical, mental, or emotional problem, do you have serious difficulty concentrating, remembering, or making decisions?", ["Yes", "No"], index=1)
     englishSpeaking = st.selectbox("How well do you speak English?", ["Very well", "Well", "Not well", "Not at all"], index=0)
@@ -85,6 +84,9 @@ user_input = {
     "concentratingIssues": concentratingIssues,
     "englishSpeaking": englishSpeaking
 }
+
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
 def fix_data(input_data):
     gender_map = {"Female": 0, "Male": 1}
@@ -142,18 +144,18 @@ def fix_data(input_data):
     print(processed_input_data)
     return processed_input_data
 
-ebullying_model = joblib.load("NewNewModels/ebullying_model_84.sav")
-mental_health_model = joblib.load("NewNewModels/depression_model_71.sav")
-pbullying_model = joblib.load("NewNewModels/pbullying_model_82.sav")
-suicide_model = joblib.load("NewNewModels/suicide_model_82.sav")
+ebullying_model = joblib.load("NewNewModels\ebullying_model_84.sav")
+mental_health_model = joblib.load("NewNewModels\depression_model_71.sav")
+pbullying_model = joblib.load("NewNewModels\pbullying_model_82.sav")
+suicide_model = joblib.load("NewNewModels\suicide_model_82.sav")
 
 def make_predictions(processed_data):
     scaler = StandardScaler()
-    processed_data_scaled = scaler.fit_transform(processed_data)
-    ebullying_prob = ebullying_model.predict_proba(processed_data_scaled)[0][1] * 100
-    mental_health_prob = mental_health_model.predict_proba(processed_data)[0][1] * 100
-    pbullying_prob = pbullying_model.predict_proba(processed_data_scaled)[0][1] * 100
-    suicide_prob = suicide_model.predict_proba(processed_data)[0][1] * 100
+    #processed_data_scaled = scaler.fit_transform(processed_data)
+    ebullying_prob = ebullying_model.predict_proba(processed_data)[0][0] * 100
+    mental_health_prob = mental_health_model.predict_proba(processed_data)[0][0] * 100
+    pbullying_prob = pbullying_model.predict_proba(processed_data)[0][0] * 100
+    suicide_prob = suicide_model.predict_proba(processed_data)[0][0] * 100
     return {
         "Cyberbullying Probability": ebullying_prob,
         "Physical Bullying Probability": pbullying_prob,
