@@ -210,6 +210,5 @@ with tab3:
     st.write("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8052596/")
     st.write("https://www.eparent.com/education/bullying-at-school-and-electronic-bullying/")
     st.write("https://www.childrenshospital.org/conditions/suicide-and-teens")
-    st.write("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8503900/")
     st.write("https://nces.ed.gov/fastfacts/display.asp?id=719")
     st.write("https://www.thetrevorproject.org/survey-2023/")
