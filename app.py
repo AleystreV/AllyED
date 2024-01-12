@@ -1,7 +1,6 @@
 import joblib
 import streamlit as st
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
 
 st.title("Project AllyED")
 st.caption("Welcome to Project AllyED! We're here to help you foster an environment where your students can feel safe. Trained on the Youth Risk Behavior Survey (YRBS), our model uses the information you enter in the sidebar to predict whether a student might be at a higher risk for depression, suicidal thoughts, physical bullying, and cyberbullying. You can also generally toggle the options to see how different factors affect the probability of various student risks.")
@@ -156,7 +155,7 @@ def make_predictions(processed_data):
         "Cyberbullying Probability": ebullying_prob,
         "Physical Bullying Probability": pbullying_prob,
         "Depression Probability": mental_health_prob,
-        "Suicide Probability": suicide_prob
+        "Suicidal Thoughts Probability": suicide_prob
     }
 
 processed_input = fix_data(user_input)
