@@ -1,6 +1,7 @@
 import joblib
 import streamlit as st
-import matplotlib.pyplot as plt
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
 st.title("Project AllyED")
 st.caption("Welcome to Project AllyED! We're here to help you foster an environment where your students can feel safe. Trained on the Youth Risk Behavior Survey (YRBS), our model uses the information you enter in the sidebar to predict whether a student might be at a higher risk for depression, suicidal thoughts, physical bullying, and cyberbullying. You can also generally toggle the options to see how different factors affect the probability of various student risks.")
@@ -85,9 +86,6 @@ user_input = {
     "englishSpeaking": englishSpeaking
 }
 
-import pandas as pd
-from sklearn.preprocessing import StandardScaler
-
 def fix_data(input_data):
     gender_map = {"Female": 0, "Male": 1}
     input_data["gender"] = gender_map.get(input_data["gender"])
@@ -150,8 +148,6 @@ pbullying_model = joblib.load("NewNewModels\pbullying_model_82.sav")
 suicide_model = joblib.load("NewNewModels\suicide_model_82.sav")
 
 def make_predictions(processed_data):
-    scaler = StandardScaler()
-    #processed_data_scaled = scaler.fit_transform(processed_data)
     ebullying_prob = ebullying_model.predict_proba(processed_data)[0][0] * 100
     mental_health_prob = mental_health_model.predict_proba(processed_data)[0][0] * 100
     pbullying_prob = pbullying_model.predict_proba(processed_data)[0][0] * 100
