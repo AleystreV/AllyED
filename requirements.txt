@@ -3,5 +3,5 @@ scikit-learn
 joblib
 streamlit
 pandas
-fpdf
+fpdf2==2.7.4
 xgboost==2.1.1
