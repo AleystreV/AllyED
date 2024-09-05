@@ -17,12 +17,12 @@ def preprocess_input(age, grade, height, weight, sexuality, juice, fruit, salad,
     }
 
     sexuality_map = {"Straight": 0, "Gay": 1, "Bisexual": 2, "Other": 3, "Questioning": 4, "Does not understand the question": 5}
-    day_map = {"None": 0, "1 day": 1, "2 days": 2, "3 days": 3, "4 days": 4, "5 days": 5, "6 days": 6, "7 days": 7}
-    sports_teams_map = {"None": 0, "1 team": 1, "2 teams": 2, "3+ teams": 3}
+    day_map = {"0/None": 0, "1 day": 1, "2 days": 2, "3 days": 3, "4 days": 4, "5 days": 5, "6 days": 6, "7 days": 7}
+    sports_teams_map = {"0/None": 0, "1 team": 1, "2 teams": 2, "3+ teams": 3}
     sleep_hours_map = {"4 or less": 1, "5": 2, "6": 3, "7": 4, "8": 5, "9": 6, "10+": 7}
     agreement_map = {"Strongly agree": 5, "Agree": 4, "Not sure": 3, "Disagree": 2, "Strongly disagree": 1}
     awareness_map = {"Never": 1, "Rarely": 2, "Sometimes": 3, "Most of the time": 4, "Always": 5}
-    screen_time_map = {"None": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5+": 5}
+    screen_time_map = {"0/None": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5+": 5}
 
     data = [
         age,
