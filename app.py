@@ -12,7 +12,7 @@ def preprocess_input(age, grade, height, weight, sexuality, juice, fruit, salad,
                      schoolmateCloseness, familyAwareness):
     grade_map = {"9th": 9, "10th": 10, "11th": 11, "12th": 12, "Other": 0}
     frequency_map = {
-        "None": 0, "1-3": 1, "4-6": 2, "1/day": 3, "2/day": 4, "3/day": 5,
+        "0/None": 0, "1-3": 1, "4-6": 2, "1/day": 3, "2/day": 4, "3/day": 5,
         "4/day": 6, "4+/day": 7
     }
 
